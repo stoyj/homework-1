@@ -95,3 +95,4 @@ console.log(calculateAverage(10, 20, 30)); // Output: 20
 console.log(calculateAverage(5, 7, 9)); // Output: 7
 
 
+console.log('asd');
