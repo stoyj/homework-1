@@ -88,6 +88,9 @@ function calculateAverage(num1, num2, num3) {
 	return (num1 + num2 + num3) / 3;
 }
 
+//  changes 
+console.log(calculateAverage(1, 20));
+
 
 // Example of a function call
 console.log(calculateAverage(4, 8, 6)); // Output: 6
