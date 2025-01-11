@@ -99,3 +99,4 @@ console.log(calculateAverage(5, 7, 9)); // Output: 7
 
 
 console.log('asd');
+
