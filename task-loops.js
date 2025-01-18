@@ -7,6 +7,10 @@
 
 // result: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
 // 2. Sum of Numbers 1 to 10
 // Goal: Understand how to accumulate values inside a loop.
 
@@ -15,6 +19,13 @@
 // Hint: Start with a variable sum initialized to 0, and add the value of i inside the loop.
 
 // Expected Output: Sum: 55
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+  sum += i;
+}
+
+console.log(sum); // Result 55;
 
 // 3. Multiplication Table (1-10)
 // Goal: Loop through values and print a multiplication table.
@@ -34,6 +45,11 @@
 // 5 x 8 = 40
 // 5 x 9 = 45
 // 5 x 10 = 50
+let number = 5;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${number} x ${i} = ${number * i}`);
+}
 
 // 4. Even Numbers from 1 to 20
 // Goal: Loop through a range of numbers and filter even numbers.
@@ -43,6 +59,11 @@
 // Hint: Use an if statement inside the loop to check if a number is even (i % 2 === 0).
 
 // Expected Output:  2, 4, 6, 8, 10, 12, 14, 16, 18, 20;
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i); // Result: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20;
+  }
+}
 
 // 5. Create a Simple Countdown Timer
 // Goal: Use the for loop to create a countdown from 10 to 1.
@@ -52,6 +73,11 @@
 // Hint: Start the loop from 10 and decrement i with each iteration.
 
 // Expected Output:  10, 9, 8, 7, 6, 5, 4, 3, 2, 1 Liftoff!;
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
+}
+
+console.log("Liftoff!");
 
 // 6. Print Each Element in an Array
 // Goal: Loop through an array and print each item.
@@ -61,6 +87,11 @@
 // Hint: Use i to index into the array and access each element.
 
 // Expected Output: apple, banana, cherry, date, elderberry;
+let favoriteFruites = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
+
+for (let i = 0; i < favoriteFruites.length; i++) {
+  console.log(favoriteFruites[i]);
+}
 
 // 7. Find the Index of an Element in an Array
 // Goal: Find and print the index of a specific element in an array.
