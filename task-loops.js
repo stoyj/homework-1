@@ -101,6 +101,14 @@ for (let i = 0; i < favoriteFruites.length; i++) {
 // Hint: Loop through the array, and when you find "cherry", print i (the index).
 
 //  Expected Output: Index of 'cherry': 2
+const fruits = ["apple", "banana", "cherry", "mango", "orange"];
+
+for (let i = 0; i < fruits.length; i++) {
+  if (fruits[i] === "cherry") {
+    console.log("Index of 'cherry' : ", i);
+    break;
+  }
+}
 
 // 8. Reverse a String
 // Goal: Reverse a string by accessing each character using a for loop.
@@ -108,8 +116,15 @@ for (let i = 0; i < favoriteFruites.length; i++) {
 // Task: Write a program that takes the string "hello" and reverses it.
 
 // Hint: Start from the end of the string (using str.length - 1) and loop backwards.
+const str = "hello";
+let reversedStr = " ";
 
-// j
+for (let i = str.length - 1; i >= 0; i--) {
+  reversedStr += str[i];
+}
+
+console.log(reversedStr);
+
 // Expected Output: olleh;
 
 // 9. Count the Occurrences of a Character in a String
@@ -120,6 +135,24 @@ for (let i = 0; i < favoriteFruites.length; i++) {
 // Hint: Loop through the string and check each character. If it matches "e", increment the count.
 
 // Expected Output:  Occurrences of 'e': 3
+// Initialize the string and the character to search for
+const string = "experience";
+const characterToFind = "e";
+
+// Initialize the count to 0
+let count = 0;
+
+// Loop through the string
+for (let i = 0; i < string.length; i++) {
+  // Check if the current character matches the character to find
+  if (string[i] === characterToFind) {
+    count++; // Increment the count
+  }
+}
+
+// Display the result
+console.log(`Occurrences of '${characterToFind}': ${count}`);
+console.log("Occurrences of 'e' :", count);
 
 // 10. Find the Longest Word in an Array
 // Goal: Use a for loop to find the longest word in an array.
