@@ -163,6 +163,16 @@ console.log("Occurrences of 'e' :", count);
 
 // console.log("Longest word:", longestWord);
 // Expected Output:  Longest word: elephant
+const words = ["cat", "elephant", "dog", "giraffe"];
+let longestWord = words[0];
+
+for (let i = 1; i < words.length; i++) {
+  if (words[i].length > longestWord.length) {
+    longestWord = words[i];
+  }
+}
+
+console.log(longestWord);
 
 // 11. Task: Count from 1 to 5 (Using while loop)
 // Goal: Use a while loop to count from 1 to 5 and print each number.
@@ -172,6 +182,12 @@ console.log("Occurrences of 'e' :", count);
 // Hint: Initialize a variable (e.g., i) to 1, then keep increasing it by 1 on each iteration of the while loop, until it reaches 5.
 
 // Expected Output: 1, 2, 3, 4, 5;
+// let i = 1;
+
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
 
 // 12. Task: Find the Largest Number in an Array (Using while loop)
 // Goal: Use a while loop to find the largest number in an array.
@@ -190,3 +206,21 @@ console.log("Occurrences of 'e' :", count);
 // Use the loop to go through the array and update largestNumber whenever a larger number is found.
 
 // console.log("The largest number is:", largestNumber);
+
+// Step 1: Create an array of numbers
+const numbers = [12, 5, 9, 22, 34, 18];
+
+// Step 2: Initialize a variable to hold the largest number
+let largestNumber = numbers[0];
+
+// Step 3: Use a while loop to iterate through the array
+let index = 1; // Start from the second element
+while (index < numbers.length) {
+  if (numbers[index] > largestNumber) {
+    largestNumber = numbers[index]; // Update largestNumber if a larger number is found
+  }
+  index++;
+}
+
+// Step 4: Print the largest number
+console.log("The largest number is:", largestNumber);
