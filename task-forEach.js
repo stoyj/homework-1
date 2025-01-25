@@ -76,9 +76,9 @@ const meals = [
 function calculateTotalCalories(meals) {
   let totalCalories = 0;
 
-  if (meals.calories) {
-    totalCalories += meals.calories;
-  }
+  // if (meals.calories) {
+  //   totalCalories += meals.calories;
+  // }
 
   // Използвам forEach, за да обходя масива
   meals.forEach((meal) => {
@@ -86,6 +86,7 @@ function calculateTotalCalories(meals) {
   });
 
   console.log(`Total calorie intake for the day: ${totalCalories}`);
+  console.log(meals);
 }
 
 // Извиквам функцията
@@ -126,18 +127,18 @@ manageRSVP(guests);
 //  Подобрение
 // Ако искам кодът да бъде по-гъвкав или организиран:
 // Това решение използвам тернарен оператор за краткост и яснота.
-function getRSVPMessage(guest) {
-  return guest.isAttending
-    ? `Thank you, ${guest.name}, for attending the party!`
-    : `We’re sorry you couldn’t make it, ${guest.name}.`;
-}
+// function getRSVPMessage(guest) {
+//   return guest.isAttending
+//     ? `Thank you, ${guest.name}, for attending the party!`
+//     : `We’re sorry you couldn’t make it, ${guest.name}.`;
+// }
 
-function manageRSVP(guests) {
-  guests.forEach((guest) => console.log(getRSVPMessage(guest)));
-}
+// function manageRSVP(guests) {
+//   guests.forEach((guest) => console.log(getRSVPMessage(guest)));
+// }
 
 // Извикваме функцията
-manageRSVP(guests);
+// manageRSVP(guests);
 // Thank you, Alice, for attending the party!
 // We’re sorry you couldn’t make it, Bob.
 // Thank you, Charlie, for attending the party!
@@ -173,28 +174,28 @@ logOutOfStockProducts(products); // Headphones
 
 // Алтернативно подобрение
 // Ако искам да разделя логиката за проверка в отделна функция, мога да създам Чистота на кода : Цел е да бъде ясен, лесен за четене и разбиране.
-function isOutOfStock(product) {
-  return product.stock === 0;
-}
+// function isOutOfStock(product) {
+//   return product.stock === 0;
+// }
 
-function logOutOfStockProducts(products) {
-  products.forEach((product) => {
-    if (isOutOfStock(product)) {
-      console.log(product.name);
-    }
-  });
-}
+// function logOutOfStockProducts(products) {
+//   products.forEach((product) => {
+//     if (isOutOfStock(product)) {
+//       console.log(product.name);
+//     }
+//   });
+// }
 
-logOutOfStockProducts(products);
+// logOutOfStockProducts(products);
 // Допълнителни упражнения
 // Използвам filter, за да създадм нов масив само с продуктите, които са изчерпани:
-const outOfStockProducts = products.filter((product) => product.stock === 0);
-console.log(outOfStockProducts.map((product) => product.name));
+// const outOfStockProducts = products.filter((product) => product.stock === 0);
+// console.log(outOfStockProducts.map((product) => product.name));
 // Извеждам броя на изчерпаните продукти:
-const outOfStockCount = products.filter(
-  (product) => product.stock === 0
-).length;
-console.log(`Number of out-of-stock products: ${outOfStockCount}`);
+// const outOfStockCount = products.filter(
+//   (product) => product.stock === 0
+// ).length;
+// console.log(`Number of out-of-stock products: ${outOfStockCount}`);
 
 // 5. Playlist Durations
 // You’re creating a playlist, and you have the following songs with their durations (in minutes):
@@ -239,8 +240,8 @@ calculatePlaylistDuration(playlist); // 0 hours and 16 minutes
 // Закръглям до най-близката десета от минутата: Ако искам по-прецизно закръгляне на минути:
 // const minutes = Math.round((totalMinutes % 60) * 10) / 10;
 // Филтрирам песни с продължителност над 5 минути:
-const longSongs = playlist.filter((song) => song.duration > 5);
-console.log(longSongs);
+// const longSongs = playlist.filter((song) => song.duration > 5);
+// console.log(longSongs);
 
 // Мога да добавям нови песни и тествам кода с различни входни данни:
-playlist.push({ title: "Song E", duration: 7.3 });
+// playlist.push({ title: "Song E", duration: 7.3 });
